@@ -1,12 +1,12 @@
-struct DSU {
-	int n;
+struct DSU {   //Zero-based
+	int size;
 	int* p;
 	int* rank;
 
 	DSU (int n) {
-		this->n = n;
-		this->p = new int[n];
-		this->rank = new int[n];
+		size = n;
+		p = new int[n];
+		rank = new int[n];
 		for(int i = 0; i < n; i++) {
 			p[i] = i;
 			rank[i] = 0;
@@ -28,5 +28,6 @@ struct DSU {
 			if(rank[i] == rank[j])
 				rank[i]++;
 		}
+		size--;
 	}
 };
