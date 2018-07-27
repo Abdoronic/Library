@@ -24,6 +24,13 @@ void replaceAll(string& s, string org, string rep) {
 	}
 }
 
+void changeCase(string& s, bool tolower) {
+	if(tolower)
+		transform(all(s), s.begin(), ::tolower);
+	else
+		transform(all(s), s.begin(), ::toupper);
+}
+
 int compareToDouble(double x, double y) {
 	if(x - y < -EPS)
 		return -1;
