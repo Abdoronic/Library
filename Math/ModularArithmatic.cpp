@@ -1,3 +1,5 @@
+#define MOD int(1e9 + 7)
+
 int addMod(int a, int b) {
     return ((a % MOD) + (b % MOD)) % MOD;
 }
